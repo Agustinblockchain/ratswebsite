@@ -1,0 +1,69 @@
+doctype html
+html(lang="en-us")
+  head
+    if title
+      title= title
+    else
+      title Rats DAO
+    // Meta tags
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+    meta(name="format-detection", content="telephone=no")
+    meta(name="msapplication-TileColor", content="#FFC24A")
+    meta(name="theme-color", content="#FFC24A")
+    meta(
+      name="description",
+      content="Bringing the value of blue chip NFTs to everyone."
+    )
+    link(rel="canonical", href="https://ratsdao.io/")
+    meta(property="og:locale", content="en_US")
+    meta(property="og:type", content="website")
+    meta(property="og:title", content="RatsDAO")
+    meta(
+      property="og:description",
+      content="Bringing the value of blue chip NFTs to everyone."
+    )
+    meta(property="og:url", content="https://ratsdao.io/")
+    meta(property="og:site_name", content="RatsDAO")
+    link(rel="shortlink", href="https://ratsdao.io/")
+    // Links
+    link(rel="stylesheet", href="/stylesheets/style.css", defer)
+    link(rel="apple-touch-icon", href="/img/logo.png")
+    link(rel="icon", type="image/ico", href="/img/ratsdaofavicon.ico")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(
+      rel="preload",
+      href="https://unpkg.com/aos@2.3.1/dist/aos.js",
+      as="script"
+    )
+    link(
+      rel="preload",
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css",
+      as="style"
+    )
+    link(
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap",
+      rel="stylesheet"
+    )
+    link(href="https://unpkg.com/aos@2.3.1/dist/aos.css", rel="stylesheet")
+    noscript
+      link(
+        rel="stylesheet",
+        media="all",
+        href="/stylesheets/noscript.css",
+        defer
+      )
+    // Viewport relativity
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+  body.preload
+    #scrolled.scrollCheck
+    #primary_content.primary_content
+      .content
+        block content
+
+      include includes/footer.pug
+
+    // Scripts
+    script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+    script(src="/javascripts/main.js", defer)

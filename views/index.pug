@@ -1,0 +1,73 @@
+extends layout
+
+block content
+  .index
+    include includes/header.pug
+
+  .hero
+    .background__wrapper
+      .background !{ gallery }
+    .hero-cover
+    .hero__content
+      h1(data-aos="fade-in", data-aos-duration="800") RatsDAO
+      h3(data-aos="fade-in", data-aos-delay="600", data-aos-duration="800") Blue chip NFTs at your disposal
+      div(data-aos="fade-in", data-aos-delay="1200", data-aos-duration="800")
+        a.btn.vr(
+          href="https://www.jpg.store/collection/ratsdao",
+          rel="noopener noreferrer",
+          target="_blank"
+        ) Join
+
+  .section
+    .section__text
+      .welcome
+        img.icon(src="/img/ratsdao.png")
+        h2.vr Welcome to RatsDAO
+        p We made a video to help you get a quick introduction to our community; it covers who we are and what we hope to achieve.
+        p Give it a watch — we promise it's short.
+        .welcome__video.vr
+          video(
+            controls,
+            frameborder="0",
+            allow="autoplay; encrypted-media",
+            allowfullscreen
+          )
+            source(src="/img/Rats_logo_intro_11.mp4")
+
+    .section__text
+      h2 Our Partners
+      .cards.vr
+        a.card.card__partner(
+          href="https://1mate.io/",
+          rel="noopener noreferrer",
+          target="_blank"
+        )
+          img(
+            src="/img/partners/3E014203-88AD-46A9-B356-3CA351C68F15.png",
+            alt="1Mate logo"
+          )
+          h3 1Mate
+        a.card.card__partner(
+          href="https://www.theadao.io/",
+          rel="noopener noreferrer",
+          target="_blank"
+        )
+          img(src="/img/partners/adao.svg", alt="ADAO logo")
+          h3 ADAO
+        a.card.card__partner(
+          href="https://metadams.io/",
+          rel="noopener noreferrer",
+          target="_blank"
+        )
+          img(
+            src="/img/partners/68dfa6da48e3229faadb4bb2c875664b.svg",
+            alt="MetaDams logo"
+          )
+          h3 MetaDams
+        a.card.card__partner(
+          href="https://www.cardanoforms.io/",
+          rel="noopener noreferrer",
+          target="_blank"
+        )
+          img(src="/img/partners/Anomaly.jpeg", alt="Forms logo")
+          h3 Forms

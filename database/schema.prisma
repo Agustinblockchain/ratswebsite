@@ -1,0 +1,28 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URI")
+}
+
+model Nfts {
+  id          String   @id
+  name        String
+  tags        String[]
+  quantity    Int
+  project     Projects @relation(fields: [projectsId], references: [id])
+  projectsId  Int
+  fingerprint String
+  url         String
+}
+
+model Projects {
+  id       Int    @id @default(autoincrement())
+  name     String
+  policyId String @unique
+  nfts     Nfts[]
+  value    Int
+}

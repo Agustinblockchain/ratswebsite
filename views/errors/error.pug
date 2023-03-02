@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  include ../includes/header.pug
+
+  .section
+    .spacer
+    .section__text
+      h1
+        | Error 
+        = status
+
+      p
+        | Uh-oh! You ran into an error. Need to go back 
+        a(href="/") home
+        | ?
+      if error
+        p.tip
+          | Error: 
+          = error
