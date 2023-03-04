@@ -6,9 +6,10 @@
   "scripts": {
     "build": "rm -rf dist && tsc",
     "start": "node dist/index.js",
-    "scss": "sass ./static/sass/style.scss ./static/css/style.css --style=\"compressed\"",
+    "scss": "sass ./static/stylesheets/style.scss ./static/stylesheets/style.css --style=\"compressed\" --watch",
     "watch": "tsc-watch --noClear -p tsconfig.json --onSuccess 'node dist/index.js'",
-    "prettier": "prettier --write package.json tsconfig.json src/**/*.ts views/*.pug"
+    "prettier": "prettier --write package.json tsconfig.json src/**/*.ts views/*.pug",
+    "migrate": "prisma migrate dev --name init"
   },
   "engines": {
     "node": ">=18"

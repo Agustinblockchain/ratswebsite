@@ -251,7 +251,7 @@ a.back {
         text-transform: uppercase;
         letter-spacing: 0.15em;
         text-decoration: none;
-        font-size: .8em;
+        font-size: .7em;
         color: var(--text-color);
         padding: math.div($base-sizing, 5) 0;
         display: flex;
@@ -273,6 +273,27 @@ a.back {
         &:hover:after { 
           width: 100%; 
           left: 0; 
+        }
+      }
+
+      .new {
+        &:after {
+          content: "NEW";
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          top: 50%;
+          right: -4em;
+          transform: translate(0, -50%);
+          font-size: 0.5em;
+          color: var(--text-color);
+          background: $blue;
+          padding: 0.25em 0.5em;
+          border-radius: 0.25em;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
         }
       }
     }
